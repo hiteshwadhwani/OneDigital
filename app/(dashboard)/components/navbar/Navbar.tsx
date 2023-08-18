@@ -15,8 +15,7 @@ const Navbar = () => {
         className="w-[50%] h-[100vh] md:px-[100px] md:w-full md:h-[100px] flex justify-between items-center"
         initial={{ opacity: 0.5, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, ease: "easeIn"}}
-        
+        transition={{ duration: 0.3, ease: "easeIn" }}
       >
         {/* ============ LOGO ============== */}
         <div className="w-[150px] h-[30px] relative">
@@ -29,18 +28,12 @@ const Navbar = () => {
           <NavItem label="Contact" />
         </div>
         <div>
-          <motion.div
-            whileHover={{ scale: 1.1, opacity: 0.8 }}
-            transition={{ duration: 0.1 }}
-            whileTap={{ scale: 1.2 }}
+          <Button
+            className={`bg-white hover:bg-white text-black border border-black rounded-full group hover:opacity-80 hover:scale-110 transition text-[18px] py-5`}
           >
-            <Button
-              className={`bg-white hover:bg-white text-black border border-black rounded-full group hover:opacity-80`}
-            >
-              Get Started
-              <MoveRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
-            </Button>
-          </motion.div>
+            Get Started
+            <MoveRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+          </Button>
         </div>
       </motion.div>
       <motion.div
