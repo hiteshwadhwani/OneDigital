@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <ClientOnly>
       <motion.div
-        className={`w-[50%] h-[100vh] md:px-[100px] md:w-full md:h-[100px] flex justify-between items-center`}
+        className={`w-[50%] h-[100vh] md:px-[100px] md:w-full md:h-[100px] flex justify-between items-center fixed top-0 z-10 bg-white`}
         initial={{ opacity: 0.5, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: "easeIn" }}
