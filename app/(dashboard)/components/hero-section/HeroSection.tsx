@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MoveRight } from "lucide-react";
 import { Poppins } from "next/font/google";

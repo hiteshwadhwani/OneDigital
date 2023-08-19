@@ -81,11 +81,10 @@ html, body, :root{
   height: 100%;
 }
 
-.stack{
-  /* scroll-snap-type: y mandatory; */
-  overflow-y: scroll;
-  height: 100vh;
-}
+/* .customFont{
+  font-family: "HelveticaNeue";
+} */
+
 
 .customTextAnimation{
   text-align: center;
