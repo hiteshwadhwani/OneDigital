@@ -34,10 +34,10 @@ const Navbar = () => {
   return (
     <ClientOnly>
       <motion.div
-        className={`px-[100px] w-full h-[80px] flex justify-between items-center sticky z-10 bg-white top-0`}
+        className={`px-[100px] w-full h-[80px] flex justify-between items-center fixed z-10 bg-white top-0`}
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: visible ? 0 : -100 }}
-        transition={{ duration: 0.6}}
+        transition={{ duration: 1.5, delay: 1.2 }}
       >
         {/* ============ LOGO ============== */}
         <div className="w-[150px] h-[30px] relative">
