@@ -104,8 +104,8 @@ const HeroSection = () => {
           </motion.div>
         </div>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 1.2 }}
           className="h-[15%] absolute bottom-0 left-0 right-0"
         >
