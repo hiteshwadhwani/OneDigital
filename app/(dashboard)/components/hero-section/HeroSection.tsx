@@ -9,7 +9,7 @@ const font = Poppins({ subsets: ["latin"], weight: "400" });
 const HeroSection = () => {
   return (
     <div className="h-[calc(100vh-80px)] w-[100%] sticky top-0 flex flex-col">
-      <div className="flex-1 flex flex-col items-center justify-center bg-black">
+      <div className="flex-1 flex flex-col items-center justify-center bg-black gap-y-[70px]">
         <div className="text-[100px] leading-[111.5px] text-center text-white customTextAnimation">
           <span>Want </span>&nbsp;
           <span>your </span>&nbsp;
@@ -26,8 +26,8 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 1 }}
-          className={`h-fit w-fit rounded-full group transition text-[30px] py-[15px] px-[30px] bg-black text-white border border-white hover:bg-white hover:text-black mt-[70px] flex flex-row items-center hover:cursor-pointer`}
+          transition={{ duration: 1.5, delay: 1.2 }}
+          className={`h-fit w-fit rounded-full group transition text-[30px] py-[15px] px-[30px] bg-black text-white border border-white hover:bg-white hover:text-black flex flex-row items-center hover:cursor-pointer`}
         >
           Get Started
           <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition" />
