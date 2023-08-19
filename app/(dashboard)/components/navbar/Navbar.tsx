@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   return (
