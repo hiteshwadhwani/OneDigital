@@ -3,23 +3,18 @@
 import ClientOnly from "@/provider/ClientOnly";
 import Navbar from "./components/navbar/Navbar";
 import { motion } from "framer-motion";
+import HeroSection from "./components/hero-section/HeroSection";
 
 const DashboardClient = () => {
   return (
     <ClientOnly>
       <Navbar />
 
-      <div className="bg-black h-[100vh] text-white text-5xl flex items-center justify-center w-[100vw] sticky top-0">
-        SECTION 1
+      <div className="h-[calc(100vh-100px)] w-[100%] sticky top-0">
+        <HeroSection />
       </div>
-      <div className="bg-blue-800 h-[100vh] text-white text-5xl flex items-center justify-center w-[100vw] sticky top-0">
+      <div className="bg-pink-900 h-[100vh] w-[100%] sticky top-0">
         SECTION 2
-      </div>
-      <div className="bg-yellow-500 h-[100vh] text-white text-5xl flex items-center justify-center w-[100vw] sticky top-0">
-        SECTION 3
-      </div>
-      <div className="bg-green-300 h-[100vh] text-white text-5xl flex items-center justify-center w-[100vw] sticky top-0">
-        SECTION 4
       </div>
     </ClientOnly>
   );

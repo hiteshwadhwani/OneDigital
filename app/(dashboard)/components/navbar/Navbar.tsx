@@ -34,10 +34,10 @@ const Navbar = () => {
   return (
     <ClientOnly>
       <motion.div
-        className={`w-[50%] h-[100vh] md:px-[100px] md:w-full md:h-[100px] flex justify-between items-center sticky z-10 bg-white top-0`}
+        className={`px-[100px] w-full h-[100px] flex justify-between items-center sticky z-10 bg-white top-0`}
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: visible ? 0 : -100 }}
-        transition={{ duration: 0.3}}
+        transition={{ duration: 0.6}}
       >
         {/* ============ LOGO ============== */}
         <div className="w-[150px] h-[30px] relative">
@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
         <div>
           <Button
-            className={`bg-white text-black border border-black rounded-full group hover:scale-110 transition text-[18px] py-5 hover:bg-black hover:text-white`}
+            className={`h-fit bg-white text-black border border-black rounded-full group hover:scale-110 transition text-[18px] py-5 hover:bg-black hover:text-white`}
           >
             Get Started
             <MoveRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
