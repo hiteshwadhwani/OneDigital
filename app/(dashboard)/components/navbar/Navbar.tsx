@@ -10,10 +10,31 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > prevScrollPos) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
   return (
     <ClientOnly>
       <motion.div
-        className={`w-[50%] h-[100vh] md:px-[100px] md:w-full md:h-[100px] flex justify-between items-center fixed top-0 z-10 bg-white`}
+        className={`w-[50%] h-[100vh] md:px-[100px] md:w-full md:h-[100px] flex justify-between items-center sticky z-10 bg-white  ${visible ? 'top-0': ''} transition`}
         initial={{ opacity: 0.5, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: "easeIn" }}
