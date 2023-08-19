@@ -82,7 +82,7 @@ const HeroSection = () => {
       <div className="relative flex-1">
         {/* content */}
         <div className="h-full pt-[150px] pb-[15%] flex flex-col justify-center items-center gap-y-[70px]">
-          <div className="text-[100px] leading-[111.5px] text-center text-white customTextAnimation">
+          <div className="text-[100px] leading-[111.5px] text-center text-white customTextAnimation customFont">
             <span>Want </span>&nbsp;
             <span>your </span>&nbsp;
             <span>brand </span>&nbsp;

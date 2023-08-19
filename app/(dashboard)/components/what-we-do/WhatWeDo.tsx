@@ -11,9 +11,9 @@ const WhatWeDo = () => {
           we do?
         </div>
         <div className="flex-1 grid grid-rows-3 gap-y-[1px] bg-white">
-          <div className="bg-black text-[60px] flex items-center justify-between px-[100px] hover:cursor-pointer hover:opacity-80 transition">Website Design <ArrowButton className="bg-[#84EDFF]" /></div>
-          <div className="bg-black text-[60px] flex items-center justify-between px-[100px] hover:cursor-pointer hover:opacity-80 transition">Website Development <ArrowButton className="bg-[#CDFF00]" /></div>
-          <div className="bg-black text-[60px] flex items-center justify-between px-[100px] hover:cursor-pointer hover:opacity-80 transition">Social media <ArrowButton className="bg-[#FF00AA]" /></div>
+          <div className="customFont bg-black text-[60px] flex items-center justify-between px-[100px] hover:cursor-pointer hover:opacity-80 transition">Website Design <ArrowButton className="bg-[#84EDFF]" /></div>
+          <div className="customFont bg-black text-[60px] flex items-center justify-between px-[100px] hover:cursor-pointer hover:opacity-80 transition">Website Development <ArrowButton className="bg-[#CDFF00]" /></div>
+          <div className="customFont bg-black text-[60px] flex items-center justify-between px-[100px] hover:cursor-pointer hover:opacity-80 transition">Social media <ArrowButton className="bg-[#FF00AA]" /></div>
         </div>
       </div>
     </div>

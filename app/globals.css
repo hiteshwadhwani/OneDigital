@@ -81,9 +81,9 @@ html, body, :root{
   height: 100%;
 }
 
-/* .customFont{
-  font-family: "HelveticaNeue";
-} */
+.customFont{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
 
 
 .customTextAnimation{
