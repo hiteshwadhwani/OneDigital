@@ -68,6 +68,8 @@
  
 @layer base {
   * {
+    margin: 0;
+    padding: 0;
     @apply border-border;
   }
   body {
@@ -77,5 +79,10 @@
 
 html, body, :root{
   height: 100%;
-  box-sizing: border-box;
+}
+
+.stack{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }

@@ -12,9 +12,9 @@ const NavItem: React.FC<NavitemProps> = ({label}) => {
     const path = usePathname()
     const isActive = path == `/${label}`
     return (
-        <div className={`${isActive && 'font-bold'} hover:cursor-pointer hover:opacity-80 hover:scale-110 transition text-[20px]`}>
+        <motion.div whileHover={{scale:1.1}} className={`${isActive && 'font-bold'} hover:cursor-pointer text-[20px]`}>
             {label}
-        </div>
+        </motion.div>
     )
 }
 
