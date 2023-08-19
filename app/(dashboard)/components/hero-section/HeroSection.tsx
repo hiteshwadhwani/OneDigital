@@ -76,7 +76,7 @@ const HeroSection = () => {
     //     />
     //   </motion.div>
     // </div>
-    <div className="h-[100vh] bg-black w-[100%] sticky top-0 flex">
+    <div className="h-[100vh] bg-black w-[100%] flex">
       <div className="relative flex-1">
         {/* content */}
         <div className="h-full pt-[150px] pb-[15%] flex flex-col justify-center items-center gap-y-[70px]">
