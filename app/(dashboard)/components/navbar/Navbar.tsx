@@ -4,7 +4,7 @@ import ClientOnly from "@/provider/ClientOnly";
 import { motion } from "framer-motion";
 import NavItem from "./NavItems";
 import { Button } from "@/components/ui/button";
-import { MoveRight } from "lucide-react";
+import { ArrowRight, MoveRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <ClientOnly>
       <motion.div
-        className={`px-[100px] w-full h-[100px] flex justify-between items-center sticky z-10 bg-white top-0`}
+        className={`px-[100px] w-full h-[80px] flex justify-between items-center sticky z-10 bg-white top-0`}
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: visible ? 0 : -100 }}
         transition={{ duration: 0.6}}
@@ -51,10 +51,10 @@ const Navbar = () => {
         </div>
         <div>
           <Button
-            className={`h-fit bg-white text-black border border-black rounded-full group hover:scale-110 transition text-[18px] py-5 hover:bg-black hover:text-white`}
+            className={`h-fit bg-white text-black border border-black rounded-full group hover:scale-110 py-2 transition text-[18px] hover:bg-black hover:text-white`}
           >
             Get Started
-            <MoveRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
           </Button>
         </div>
       </motion.div>

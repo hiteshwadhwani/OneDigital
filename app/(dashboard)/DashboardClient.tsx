@@ -10,7 +10,7 @@ const DashboardClient = () => {
     <ClientOnly>
       <Navbar />
 
-      <div className="h-[calc(100vh-100px)] w-[100%] sticky top-0">
+      <div className="h-[calc(100vh-80px)] w-[100%] sticky top-0">
         <HeroSection />
       </div>
       <div className="bg-pink-900 h-[100vh] w-[100%] sticky top-0">
