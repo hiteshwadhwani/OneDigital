@@ -4,12 +4,15 @@ import ClientOnly from "@/provider/ClientOnly";
 import { motion } from "framer-motion";
 import NavItem from "./NavItems";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, HammerIcon, Menu } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useMenu } from "@/hooks/useMenu";
+import SideMenu from "@/components/SideMenu";
 
 const Navbar = () => {
+  const {setOpen, isOpen} = useMenu()
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -31,20 +34,22 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
+ 
 
   return (
     <ClientOnly>
+      <SideMenu />
       <motion.div
-        className={`px-[100px] w-full h-[80px] flex justify-between items-center z-10 text-white fixed top-0 backdrop-blur-3xl`}
+        className={`${isOpen ? 'hidden': 'block'} px-[40px] md:px-[100px] w-full h-[60px] md:h-[80px] flex justify-between items-center z-10 text-white fixed top-0 backdrop-blur-3xl`}
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 1.2 }}
       >
         {/* ============ LOGO ============== */}
-        <div className="w-[150px] h-[30px] relative">
+        <div className="h-[20px] w-[100px] md:w-[150px] md:h-[30px] relative">
           <Image src={"/images/logo.svg"} fill alt="Logo" />
         </div>
-        <div className="flex flex-row items-center gap-x-[50px]">
+        <div className="hidden md:flex flex-row items-center gap-x-[50px]">
           <NavItem label="Service" />
           <NavItem label="Work" />
           <NavItem label="About us" />
@@ -52,12 +57,14 @@ const Navbar = () => {
         </div>
         <div>
           <Button
-            className={`h-fit bg-white text-black border border-black rounded-full group hover:scale-110 py-2 transition text-[18px] hover:bg-black hover:text-white`}
+            className={`hidden md:flex h-fit bg-black text-white border border-white rounded-full group hover:scale-110 py-2 transition text-[18px] hover:text-black hover:bg-white`}
           >
             Get Started
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
           </Button>
         </div>
+        
+        <Menu onClick={() => setOpen()} className="md:hidden w-5 h-5 hover:cursor-pointer hover:opacity-80" />
       </motion.div>
       {/* <motion.div
         initial={{ opacity: 0.5, y: -100 }}
