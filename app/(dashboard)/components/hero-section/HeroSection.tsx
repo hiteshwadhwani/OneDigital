@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="relative flex-1">
         {/* content */}
         <div className="h-full pt-[60px] pb-[30vh] md:pb-[15vh] flex flex-col md:items-center justify-center gap-y-[50px] md:gap-y-[70px] px-[33px] md:px-0">
-          <div className="text-[50px] md:text-[100px] leading-[125%] md:leading-[111.5%] md:text-center text-white customTextAnimation">
+          <div className="text-[50px] md:text-[100px] leading-[125%] md:leading-[111.5%] md:text-center text-white customTextAnimation font">
             <span>Want </span>&nbsp;
             <span>your </span>&nbsp;
             <span>brand </span>&nbsp;

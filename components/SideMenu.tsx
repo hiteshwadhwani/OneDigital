@@ -2,6 +2,7 @@
 import { useMenu } from "@/hooks/useMenu";
 import { cn } from "@/lib/utils";
 import { Variant, Variants, motion } from "framer-motion";
+import { X } from "lucide-react";
 import { useRef } from "react";
 
 // const sidebar = {
@@ -48,6 +49,7 @@ const SideMenu = () => {
     initial={{width: 0}} animate={{width: isOpen ? '100%' : 0}} transition={{duration: 0.5, ease: 'easeOut'}}
       className={`text-white absolute h-[100vh] bg-gradient-to-br from-black to-[#1f1f1f] z-10`}
     >
+        
     </motion.nav>
   );
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import ClientOnly from "@/provider/ClientOnly";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import NavItem from "./NavItems";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, HammerIcon, Menu } from "lucide-react";
@@ -12,7 +12,7 @@ import { useMenu } from "@/hooks/useMenu";
 import SideMenu from "@/components/SideMenu";
 
 const Navbar = () => {
-  const {setOpen, isOpen} = useMenu()
+  const { setOpen, isOpen } = useMenu();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -34,16 +34,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
- 
-
   return (
     <ClientOnly>
       <SideMenu />
       <motion.div
-        className={`${isOpen ? 'hidden': 'block'} px-[40px] md:px-[100px] w-full h-[60px] md:h-[80px] flex justify-between items-center z-10 text-white fixed top-0 backdrop-blur-3xl`}
+        className={`${
+          isOpen ? "hidden" : "block"
+        } px-[40px] md:px-[100px] w-full h-[60px] md:h-[80px] flex justify-between items-center z-10 text-white fixed top-0 bg-black`}
         initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, delay: 1.2 }}
+        animate={{ opacity: 1, y: visible ? 0 : -100 }}
+        transition={{
+          duration: 1.5,
+        }}
       >
         {/* ============ LOGO ============== */}
         <div className="h-[20px] w-[100px] md:w-[150px] md:h-[30px] relative">
@@ -63,8 +65,11 @@ const Navbar = () => {
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
           </Button>
         </div>
-        
-        <Menu onClick={() => setOpen()} className="md:hidden w-5 h-5 hover:cursor-pointer hover:opacity-80" />
+
+        <Menu
+          onClick={() => setOpen()}
+          className="md:hidden w-5 h-5 hover:cursor-pointer hover:opacity-80"
+        />
       </motion.div>
       {/* <motion.div
         initial={{ opacity: 0.5, y: -100 }}
