@@ -9,6 +9,7 @@ import SideMenu from "@/components/SideMenu";
 import Portfolio from "./components/portfolio/Portfolio";
 import TrustProcess from "./components/trust-the-process/TrustProcess";
 import WhatPeopleSay from "./components/what-people-say/WhatPeopleSay";
+import MeetTeam from "./components/meet-team/MeetTeam";
 
 const DashboardClient = () => {
   return (
@@ -20,6 +21,7 @@ const DashboardClient = () => {
       <Portfolio />
       <TrustProcess />
       <WhatPeopleSay />
+      <MeetTeam />
     </ClientOnly>
   );
 };
