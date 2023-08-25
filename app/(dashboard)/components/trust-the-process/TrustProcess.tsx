@@ -8,7 +8,7 @@ const TrustProcess = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <div ref={ref} className="h-[100vh] flex flex-col">
+    <div ref={ref} className="h-fit flex flex-col">
       <div
         className="text-[70px] font-light md:text-[150px] leading-[75.97px] md:leading-[144.78px] p-5"
         style={{
