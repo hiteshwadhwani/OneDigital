@@ -24,33 +24,33 @@ const Portfolio = () => {
     <div className="py-5 h-[100vh] w-full">
       <ParallaxText baseVelocity={3}>
         <div className="flex flex-row items-center gap-x-10 font-extralight">
-          <div>WE DESGIN</div>
+          <div className="text-[20px] md:text-[40px]">WE DESGIN</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>We BUILD</div>
+          <div className="text-[20px] md:text-[40px]">We BUILD</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>We PROMOTE</div>
+          <div className="text-[20px] md:text-[40px]">We PROMOTE</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>WE DESGIN</div>
+          <div className="text-[20px] md:text-[40px]">WE DESGIN</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>We BUILD</div>
+          <div className="text-[20px] md:text-[40px]">We BUILD</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>We PROMOTE</div>
+          <div className="text-[20px] md:text-[40px]">We PROMOTE</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>WE DESGIN</div>
+          <div className="text-[20px] md:text-[40px]">WE DESGIN</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>We BUILD</div>
+          <div className="text-[20px] md:text-[40px]">We BUILD</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
-          <div>We PROMOTE</div>
+          <div className="text-[20px] md:text-[40px]">We PROMOTE</div>
           <Image width={27} height={27} alt="star" src={"/images/Star.svg"} />
         </div>
       </ParallaxText>
 
       {/* heading */}
-      <h1 className="text-[200px] font-medium text-center">PORTFOLIO</h1>
+      <h1 className="text-[120px] md:text-[200px] text-center leading-[104.76px] md:leading-normal pt-4 md:pt-0">PORT<span className="md:hidden">-</span>FOLIO</h1>
 
       {/* menu */}
-      <div className="text-[30px] text-[#949494] flex flex-row items-center justify-between w-[50%] mx-auto font-light">
-        <div className="hover:text-black transition hover:cursor-pointer">
+      <div className="text-[15px] md:text-[30px] text-[#949494] flex flex-row items-center justify-between  md:w-[50%] mx-auto font-light p-4 md:p-0">
+        <div className="hidden md:block hover:text-black transition hover:cursor-pointer">
           All
         </div>
         <div className="hover:text-black transition hover:cursor-pointer">
@@ -74,9 +74,9 @@ const Portfolio = () => {
           {selectedTab ? selectedTab.icon : "😋"}
         </motion.div> */}
 
-        {portfolio.map((item) => (
+        {/* {portfolio.map((item) => (
             <PortfolioCard key={item.heading} {...item} />
-        ))}
+        ))} */}
       </AnimatePresence>
     </div>
   );

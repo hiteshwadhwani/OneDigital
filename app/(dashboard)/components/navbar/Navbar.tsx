@@ -1,13 +1,13 @@
 "use client";
 
 import ClientOnly from "@/provider/ClientOnly";
-import { delay, motion } from "framer-motion";
+import { delay, motion, useInView } from "framer-motion";
 import NavItem from "./NavItems";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, HammerIcon, Menu } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMenu } from "@/hooks/useMenu";
 import SideMenu from "@/components/SideMenu";
 
@@ -46,6 +46,7 @@ const Navbar = () => {
         transition={{
           duration: 1.5,
         }}
+        
       >
         {/* ============ LOGO ============== */}
         <div className="h-[20px] w-[100px] md:w-[150px] md:h-[30px] relative">
