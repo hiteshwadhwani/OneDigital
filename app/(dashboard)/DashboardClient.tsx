@@ -8,6 +8,7 @@ import WhatWeDo from "./components/what-we-do/WhatWeDo";
 import SideMenu from "@/components/SideMenu";
 import Portfolio from "./components/portfolio/Portfolio";
 import TrustProcess from "./components/trust-the-process/TrustProcess";
+import WhatPeopleSay from "./components/what-people-say/WhatPeopleSay";
 
 const DashboardClient = () => {
   return (
@@ -18,6 +19,7 @@ const DashboardClient = () => {
       <WhatWeDo />
       <Portfolio />
       <TrustProcess />
+      <WhatPeopleSay />
     </ClientOnly>
   );
 };

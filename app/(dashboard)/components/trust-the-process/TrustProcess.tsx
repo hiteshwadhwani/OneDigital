@@ -36,7 +36,7 @@ const TrustProcess = () => {
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-[1px] bg-white w-full h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-[1px] bg-white w-full h-full border-b border-white">
           <div className="flex flex-col gap-y-[20px] items-start justify-center bg-black text-white">
             <div className="md:w-[70%] py-12 px-12">
               <div className="w-[80px] h-[80px] rounded-full bg-[#CDFF00] text-black flex items-center justify-center font-bold text-3xl">
