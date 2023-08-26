@@ -10,6 +10,7 @@ import Portfolio from "./components/portfolio/Portfolio";
 import TrustProcess from "./components/trust-the-process/TrustProcess";
 import WhatPeopleSay from "./components/what-people-say/WhatPeopleSay";
 import MeetTeam from "./components/meet-team/MeetTeam";
+import CallUs from "./components/call-us/CallUs";
 
 const DashboardClient = () => {
   return (
@@ -22,6 +23,7 @@ const DashboardClient = () => {
       <TrustProcess />
       <WhatPeopleSay />
       <MeetTeam />
+      <CallUs />
     </ClientOnly>
   );
 };
