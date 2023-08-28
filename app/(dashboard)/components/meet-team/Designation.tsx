@@ -12,21 +12,25 @@ interface DesignationProps {
   imageUrl: string;
   designation: string;
   className?: string
+  nameClass ?: string
+  headingClass?: string
 }
 
 const Designation: React.FC<DesignationProps> = ({
   imageUrl,
   name,
   designation,
-  className
+  className,
+  nameClass,
+  headingClass
 }) => {
   return (
     <div className={cn("w-fit", className)}>
       <div
         className={cn(
           font.className,
+          nameClass,
           "text-[50px] leading-[60.51px] text-center",
-          
         )}
       >
         {name}
@@ -37,6 +41,7 @@ const Designation: React.FC<DesignationProps> = ({
       <div
         className={cn(
           "text-[30px] leading-[36.31px] text-center",
+          headingClass,
           font.className
         )}
       >

@@ -4,6 +4,10 @@ import Image from "next/image";
 import Card from "./Cards";
 import Designation from "./Designation";
 
+import { Happy_Monkey } from "next/font/google";
+import { cn } from "@/lib/utils";
+const font = Happy_Monkey({ weight: ["400"], subsets: ["latin"] });
+
 const MeetTeam = () => {
   return (
     <div className="min-h-[100vh] h-fit flex flex-col">
@@ -69,6 +73,57 @@ const MeetTeam = () => {
             designation="Head of Social media"
             imageUrl="/images/lines/img2.svg"
           />
+        </div>
+      </div>
+
+      {/* mobile view */}
+      <div className="lg:hidden flex-1 flex items-center">
+        <div className="flex flex-row flex-wrap justify-around gap-y-14">
+          <div className="w-[150px] h-[200px] flex items-center flex-col">
+            <Image
+              src={"/images/team/dhruv.svg"}
+              alt="dhruv image"
+              width={100}
+              height={100}
+            />
+            <div className="flex items-center justify-center flex-col">
+              <p className={cn("text-[30px] text-center", font.className)}>Dhruv Patel</p>
+              <div className="h-4 w-full relative">
+                <Image src={"/images/lines/img1.svg"} alt="line" fill />
+              </div>
+              <p className={cn(font.className, "text-[12px] text-[#A5A5A5]")}>Head Of Design</p>
+            </div>
+          </div>
+          <div className="w-[150px] h-[200px] flex items-center flex-col">
+            <Image
+              src={"/images/team/hitesh.svg"}
+              alt="dhruv image"
+              width={100}
+              height={100}
+            />
+            <div className="flex items-center justify-center flex-col">
+              <p className={cn("text-[30px] text-center", font.className)}>Hitesh Wadhwani</p>
+              <div className="h-4 w-full relative">
+                <Image src={"/images/lines/img3.svg"} alt="line" fill />
+              </div>
+              <p className={cn(font.className, "text-[12px] text-[#A5A5A5]")}>Head Of Tech</p>
+            </div>
+          </div>
+          <div className="w-[150px] h-[200px] flex items-center flex-col">
+            <Image
+              src={"/images/team/ashu.svg"}
+              alt="dhruv image"
+              width={100}
+              height={100}
+            />
+            <div className="flex items-center justify-center flex-col">
+              <p className={cn("text-[30px] text-center", font.className)}>Ishaan Shivhare</p>
+              <div className="h-4 w-full relative">
+                <Image src={"/images/lines/img2.svg"} alt="line" fill />
+              </div>
+              <p className={cn(font.className, "text-[12px] text-[#A5A5A5]")}>Head Of Social Media</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

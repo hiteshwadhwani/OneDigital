@@ -11,6 +11,7 @@ import TrustProcess from "./components/trust-the-process/TrustProcess";
 import WhatPeopleSay from "./components/what-people-say/WhatPeopleSay";
 import MeetTeam from "./components/meet-team/MeetTeam";
 import CallUs from "./components/call-us/CallUs";
+import SendQuery from "./components/send-query/SendQuery";
 
 const DashboardClient = () => {
   return (
@@ -24,6 +25,7 @@ const DashboardClient = () => {
       <WhatPeopleSay />
       <MeetTeam />
       <CallUs />
+      <SendQuery />
     </ClientOnly>
   );
 };
